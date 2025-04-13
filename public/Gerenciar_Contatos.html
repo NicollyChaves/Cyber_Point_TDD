@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciar Contatos</title>
+    <!-- ======= Styles ====== -->
+    <link rel="stylesheet" href="assets/css/style_gerenciar_ajustes.css">
+</head>
+
+<body>
+    <!-- =============== Navigation ================ -->
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="index.html">
+                        <span class="icon">
+                            <img src="assets/imgs/Logo.png" alt="">
+                        </span>
+                        <span class="title">Cyber Point</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="Dashboard.html">
+                        <span class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </span>
+                        <span class="title" id="Dash">Dashboard</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="Perfil.html">
+                        <span class="icon">
+                            <ion-icon name="people-outline"></ion-icon>
+                        </span>
+                        <span class="title" id="Perfil">Perfil</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="Cadastrar_Contatos.html">
+                        <span class="icon">
+                            <ion-icon name="add-circle-outline"></ion-icon>
+                        </span>
+                        <span class="title" id="Cadastrar_Contatos">Cadastrar Contatos</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="Gerenciar_Contatos.html">
+                        <span class="icon">
+                            <ion-icon name="settings-outline"></ion-icon>
+                        </span>
+                        <span class="title" id="Gerenciar_Contatos">Gerenciar Contatos</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/logout">
+                        <span class="icon">
+                            <ion-icon name="log-out-outline"></ion-icon>
+                        </span>
+                        <span class="title" id="Sair">Sign Out</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- ========================= Main ==================== -->
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </div>
+
+                <div class="search">
+                    <label>
+                        <input type="text" id="searchInput" placeholder="Search here">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </label>
+                </div>
+
+                <div class="user">
+                    <img id="foto-usuario" src="assets/imgs/default.jpg" alt="Foto do usuário">
+                </div>
+            </div>
+
+        <!--===========================Listar===========================-->
+
+        <div class="container_Lista">
+            <h2>Lista de Contatos</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>E-mail</th>
+                        <th>Telefone</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                
+                <tbody id="contact-list">
+                    <!-- Contatos serão adicionados aqui -->
+                    <tr>
+                        <td>
+                          <button onclick="viewContact('001')">👁️</button>
+                          <button onclick="editContact('001')">✏️</button>
+                          <button onclick="deleteContact('001')">🗑️</button>
+                        </td>
+                      </tr>
+
+                </tbody>
+            </table>
+
+            <!--Container Detalhes Olhinho-->
+            <div id="detalhes-contato" style="display: none; border: 1px solid #ccc; padding: 15px; margin-top: 20px;">
+                <h3>Detalhes do Contato</h3>
+                <p><strong>Nome:</strong> <span id="detalhe-nome"></span></p>
+                <p><strong>Email:</strong> <span id="detalhe-email"></span></p>
+                <p><strong>Telefone:</strong> <span id="detalhe-telefone"></span></p>
+                <button onclick="fecharDetalhes()">Fechar</button>
+            </div>
+
+            <!--Container Editar Lápis-->
+            <div id="editar-contato" style="display: none; border: 1px solid #ccc; padding: 15px; margin-top: 20px;">
+                <h3>Editar Contato</h3>
+                <form id="form-editar-contato">
+                    <input type="hidden" id="edit-id">
+                    <p><strong>Nome:</strong> <br><input type="text" id="edit-nome"></p>
+                    <p><strong>Email:</strong> <br> <input type="email" id="edit-email"></p>
+                    <p><strong>Telefone:</strong> <br> <input type="text" id="edit-telefone"></p>
+                    <button type="submit">Salvar Alterações</button>
+                    <button type="button" onclick="fecharEdicao()">Cancelar</button>
+                </form>
+            </div>            
+              
+        </div>
+            
+    </div>
+
+    <!-- =========== Scripts =========  -->
+    <script src="assets/js/script_ajustes.js"></script>
+
+    <!-- ====== ionicons ======= -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+     <!-- Linking Swiper script -->
+     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+     
+</body>
+
+</html>

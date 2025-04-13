@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<!-- Coding by CodingNepal - youtube.com/@codingnepal -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cyber Point</title>
+    <!-- Linking Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <!-- Linking Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/css/style_index.css" />
+  </head>
+  <body>
+    <!-- Header / Navbar -->
+    <header>
+      <nav class="navbar">
+        <a href="#" class="nav-logo">
+            <h2 class="logo-text">Cyber Point</h2>
+        </a>
+        <ul class="nav-menu">
+            <button id="menu-close-button" class="fas fa-times"></button>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="#about" class="nav-link">Somos</a>
+            </li>
+            <li class="nav-item">
+              <a href="#testimonials" class="nav-link">Criadores</a>
+            </li>
+
+            <li class="nav-item">
+              <a href="#contact" class="nav-link">Cadastrar-se</a>
+            </li>
+          </ul>
+          <button id="menu-open-button" class="fas fa-bars"></button>
+      </nav>
+    </header>
+    <main>
+      <!-- Hero section -->
+      <section class="hero-section">
+        <div class="section-content">
+          <div class="hero-details">
+            <h2 class="title">Cyber Point</h2>
+            <h6 class="subtitle">"Conectando você ao futuro."</h6>
+            <p class="description">Uma plataforma simples e poderosa para armazenar e gerenciar seus contatos. Cadastre, edite e encontre com facilidade quem você precisa, quando precisar!</p>
+            <div class="buttons">
+              <a href="login.html" class="button order-now">Entrar</a>
+              <a href="#contact" class="button contact-us">Cadastrar-se</a>
+            </div>
+          </div>
+          <div class="hero-image-wrapper">
+            <img src="assets/imgs/undraw_workspace_s6wf.svg" alt="Workspace" class="hero-image" />
+          </div>
+        </div>
+      </section>
+      <!-- About section -->
+      <section class="about-section" id="about">
+        <div class="section-content">
+          <div class="about-image-wrapper">
+            <img src="assets/imgs/Somos.png" alt="travelling" class="about-image" />
+          </div>
+          <div class="about-details">
+            <h2 class="section-title">Quem Somos</h2>
+            <p class="text">O Cyber Point é uma plataforma inovadora desenvolvida para facilitar o gerenciamento de contatos. Com um design intuitivo e funcionalidades inteligentes, ajudamos você a manter suas conexões organizadas de forma simples e eficiente. Nossa Missão é transformar a maneira como você lida com informações, tornando sua experiência mais fluida e acessível.</p>
+            <div class="social-link-list">
+              <a href="https://github.com/CyberPoint08" class="social-link"><i class="fa-brands fa-github"></i></a>
+              <a href="https://trello.com/b/5CFpSEz7/cyberpoint" class="social-link"><i class="fa-brands fa-trello"></i></a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Testimonials section -->
+      <section class="testimonials-section" id="testimonials">
+        <h2 class="section-title">Criadores</h2>
+        <div class="section-content">
+          <div class="slider-container swiper">
+            <div class="slider-wrapper">
+              <ul class="testimonials-list swiper-wrapper">
+                <li class="testimonial swiper-slide">
+                  <img src="assets/imgs/User-1.jpg" alt="User" class="user-image" />
+                  <h3 class="name">Eliane Santos</h3>
+                  <i class="feedback">Uma profissional comunicativa, proativa e criativa, que se destaca pela dedicação e trabalho em equipe. Possui habilidades em liderança, gerenciamento e atendimento ao cliente, além de conhecimentos em Front-End e JavaScript.</i>
+                </li>
+                <li class="testimonial swiper-slide">
+                  <img src="assets/imgs/User-2.png" alt="User" class="user-image" />
+                  <h3 class="name">Erick Chaves</h3>
+                  <i class="feedback">Um profissional proativo, com boa comunicação e forte capacidade de tomada de decisão. Valoriza o trabalho em equipe e tem inteligência emocional. Possui experiência em desenvolvimento com Java, PHP, JavaScript e banco de dados.</i>
+                </li>
+                <li class="testimonial swiper-slide">
+                  <img src="assets/imgs/User-3.jpg" alt="User" class="user-image" />
+                  <h3 class="name">Nicolly Chaves</h3>
+                  <i class="feedback">Uma profissional expressiva, comunicativa e criativa, com perfil proativo e colaborativo. Possui conhecimento em Java, Python, SQL, JavaScript e desenvolvimento Full Stack (Front e Back-End), além de habilidades em design.</i>
+                </li>
+              </ul>
+              <div class="swiper-pagination"></div>
+              <div class="swiper-slide-button swiper-button-prev"></div>
+              <div class="swiper-slide-button swiper-button-next"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Contact section -->
+      <section class="contact-section" id="contact">
+        <h2 class="section-title">Cadastrar-se</h2>
+        <div class="section-content">
+          <ul class="contact-info-list">
+            <img src="assets/imgs/undraw_traveling_c18z-.svg" alt="">
+          </ul>
+          <form action="http://localhost:3000/cadastro" method="POST" enctype="multipart/form-data" class="contact-form">
+            <input type="text" name="nome" placeholder="Nome" class="form-input" required />
+            <input type="email" name="email" placeholder="Email" class="form-input" required />
+            <input type="password" name="senha" placeholder="Criar senha" class="form-input" required />
+            <input type="password" name="confirmar_senha" placeholder="Confirmar senha" class="form-input" required />
+            <div class="upload-container">
+                <label for="file-input" class="upload-label">Escolher Imagem</label>
+                <input type="file" name="imagem" id="file-input" accept="image/*" class="form-input" required>
+                <br>
+                <img id="preview">
+            </div>
+            <button type="submit" class="button submit-button">Enviar</button>
+          </form>
+        </div>
+      </section>
+      <!-- Footer section -->
+      <footer class="footer-section">
+        <div class="section-content">
+          <p class="copyright-text">© 2025 Cyber Point</p>
+          <div class="social-link-list">
+            <a href="https://github.com/CyberPoint08" class="social-link"><i class="fa-brands fa-github"></i></a>
+            <a href="https://trello.com/b/5CFpSEz7/cyberpoint" class="social-link"><i class="fa-brands fa-trello"></i></a>
+          </div>
+          <p class="policy-text">
+            <a href="https://policies.google.com/privacy?hl=pt-BR" class="policy-link">Política de Privacidade</a>
+          </p>
+        </div>
+      </footer>
+    </main>
+    <!-- Linking Swiper script -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Linking custom script -->
+    <script src="assets/js/script_index.js"></script>
+  </body>
+</html>
