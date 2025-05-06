@@ -1,8 +1,8 @@
 ----------------------------------------------------------------Integrantes Deste Projeto---------------------------------------------
 
-Nicolly da Silva Chaves | RGM: 38566605
-Eliane Silva Santos | RGM: 38566320
-Erick da Silva Chaves | RGM: 38566427
+Nicolly da Silva Chaves | RGM: 38566605 |
+Eliane Silva Santos | RGM: 38566320 |
+Erick da Silva Chaves | RGM: 38566427 |
 
 ----------------------------------------------------------------Objetivo Deste Projeto--------------------------------------------------------------
 
